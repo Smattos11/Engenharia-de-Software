@@ -4,7 +4,7 @@
 
 body {
     color: white;
-    background-color: rgb(48, 46, 70);
+    background-color: rgb(3, 1, 26);
     font-family: "Montserrat", sans-serif;
 }
 
@@ -40,23 +40,25 @@ body nav ul li:hover::after {
 }
 
 a {
-    color: white;
+    color: rgb(241, 227, 227);
     text-decoration: none;
 }
 
 img {
-    width: 350px;
-    height: 300px;
+    width: 600px;
+    height: 500px;
+    padding: 0;
 }
 
 .logo {
     font-family: "Orbitron", sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     font-width: 900;
     color: red;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     text-align: center;
     margin: 20px;
+    padding: 100;
 }
 
 footer {
@@ -72,14 +74,26 @@ section {
 }
 
 h1 {
-    color: whitesmoke;
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    font-width: 900;
+    color: rgb(191, 0, 0);
+    text-shadow: 0 0 10px rgba(253, 2, 2, 0.5);
     text-align: center;
+    margin: 50px;
+    padding: 100;
 }
 
+
 h2 {
-    color: whitesmoke;
+    font-family: "Orbitron", sans-serif;
+    font-size: 3rem;
+    font-width: 900;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
     text-align: center;
-    margin: 10px;
+    margin: 50px;
+    padding: 100;
 }
 
 .center {
@@ -87,31 +101,55 @@ h2 {
     margin: 0;
     padding: 20px;
 }
- header {
+header {
     width: 100%;
     padding: 1%;
-    background-color: rgb(46, 68, 123);
+    background-color: rgb(5, 20, 61);
  }
 
 .texto1 {
-    background-color: red;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
     padding: 25px;
-    border-radius: 15px;
-    margin: 20px auto;
-    box-shadow: yellow;
-    max-width: 900px;
-    border: 1px solid #1f2937;
+    border-radius: 20px;
+    margin: 25px auto;
+    box-shadow: rgb(0, 0, 0);
+    max-width: 1000px;
+    width: 1000px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
 }
 
 .texto2 {
-    background-color: red;
-    padding: 100px;
-    border-radius: 15px;
-    margin: 20px auto;
-    box-shadow: yellow;
-    max-width: 80%;
-    border: 2px solid #1f2937;
+    background-color: rgb(0, 0, 0);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 25px auto;
+    max-width: 1000px;
+    width: 1000px;
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
 }
- h3 {
-    
- }
+.texto3 {
+    background-color: rgb(0, 0, 0);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 25px auto;
+    max-width: 1000px;
+    width: 1000px;
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 4rem;
+    font-width: 900;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    text-align: center;
+    margin: 50px;
+    padding: 100;
+}
