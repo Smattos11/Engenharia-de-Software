@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style11.css">
     <title>Ninja Go - Jogo de Aventura Ninja</title>
 </head>
 
@@ -98,7 +98,7 @@
     </section>
     <section class="Jogar agora" id="jogar">
         <h2>Jogar agora</h2>
-        <iframe id="gameFrame" width="100%" height="600" src="Jogo02/index.html"></iframe>
+        <iframe id="gameFrame" width="100%" height="600" src="game/index.html"></iframe>
     </section>
     <section class="feedback">
         <h2>Deixe seu feedback</h2>
@@ -120,7 +120,6 @@
                 document.getElementById("respostaFeedback").innerText =
                     "Obrigado pelo feedback, " + nome + "!";
 
-                // limpa campos
                 document.getElementById("formFeedback").reset();
             });
         </script>
@@ -131,7 +130,6 @@
     <script>
         let nome = prompt("Qual seu nome?");
 
-        // Se cancelar ou deixar vazio
         if (!nome) {
             alert("Nome é obrigatório!");
             location.reload();
@@ -139,18 +137,15 @@
 
         let idade = parseInt(prompt("Qual sua idade?"));
 
-        // Validação da idade
         if (isNaN(idade)) {
             alert("Digite uma idade válida!");
             location.reload();
         }
 
-        // MAIOR DE IDADE
         if (idade >= 18) {
             alert("Bem-vindo ao Ninja Go, " + nome + "!");
         }
 
-        // MENOR DE IDADE (BLOQUEIO)
         else {
             alert("Acesso negado! Apenas maiores de 18 anos podem acessar.");
 
