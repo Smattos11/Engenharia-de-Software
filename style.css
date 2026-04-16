@@ -223,7 +223,8 @@ iframe {
 
 .blur {
     filter: blur(8px);
-    pointer-events: none; /* bloqueia clique */
+    pointer-events: none;
+    /* bloqueia clique */
     user-select: none;
 }
 
@@ -233,7 +234,7 @@ iframe {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     display: flex;
     justify-content: center;
@@ -376,7 +377,6 @@ h2 {
 .btn-feedback {
     transition: 0.3s;
 }
-
 
 .btn-feedback:hover {
     transform: scale(1.03);
