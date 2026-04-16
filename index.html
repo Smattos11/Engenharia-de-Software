@@ -107,10 +107,23 @@
 
             <textarea id="mensagemFeedback" placeholder="Digite seu feedback..." required></textarea>
 
-            <button type="submit">Enviar Feedback</button>
+            <button type="submit" class="btn-feedback">Enviar Feedback</button>
         </form>
-
         <p id="respostaFeedback"></p>
+        <script>
+            document.getElementById("formFeedback").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                let nome = document.getElementById("nomeFeedback").value;
+                let mensagem = document.getElementById("mensagemFeedback").value;
+
+                document.getElementById("respostaFeedback").innerText =
+                    "Obrigado pelo feedback, " + nome + "!";
+
+                // limpa campos
+                document.getElementById("formFeedback").reset();
+            });
+        </script>
     </section>
     <footer>
         @2026 Desenvolvido por Silvio

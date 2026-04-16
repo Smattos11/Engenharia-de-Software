@@ -294,3 +294,82 @@ h2 {
 .dark a {
     color: #00f7ff;
 }
+
+.feedback {
+    background: #ccc;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.feedback input,
+.feedback textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-family: Arial;
+}
+
+.feedback textarea {
+    height: 120px;
+    resize: none;
+}
+
+.feedback button {
+    background: yellow;
+    color: #222;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.feedback button:hover {
+    background: gold;
+}
+
+.dark .feedback {
+    background: #222;
+    color: white;
+}
+
+.dark .feedback input,
+.dark .feedback textarea {
+    background: #333;
+    color: white;
+}
+
+/* FORM FEEDBACK ORGANIZADO */
+#formFeedback {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-feedback {
+    background: yellow;
+    color: #222;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    position: static; /* MUITO IMPORTANTE */
+    box-shadow: none;
+}
+
+.btn-feedback:hover {
+    background: gold;
+}
+
+/* DARK MODE */
+.dark .btn-feedback {
+    background: #00f7ff;
+    color: #000;
+}
