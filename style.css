@@ -344,7 +344,6 @@ h2 {
     color: white;
 }
 
-/* FORM FEEDBACK ORGANIZADO */
 #formFeedback {
     display: flex;
     flex-direction: column;
@@ -360,7 +359,7 @@ h2 {
     cursor: pointer;
     font-weight: bold;
     width: 100%;
-    position: static; /* MUITO IMPORTANTE */
+    position: static;
     box-shadow: none;
 }
 
@@ -368,8 +367,15 @@ h2 {
     background: gold;
 }
 
-/* DARK MODE */
 .dark .btn-feedback {
     background: #00f7ff;
     color: #000;
+}
+
+.btn-feedback {
+    transition: 0.3s;
+}
+
+.btn-feedback:hover {
+    transform: scale(1.03);
 }
