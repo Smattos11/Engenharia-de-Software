@@ -7,8 +7,8 @@
 }
 
 body {
-    color: white;
-    background-color: rgb(5, 0, 65);
+    color: #000;
+    background-color: #f1f1f1;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -44,7 +44,7 @@ nav ul li:hover::after {
 }
 
 a {
-    color: rgba(241, 227, 227);
+    color: #0077ff;
     text-decoration: none;
 }
 
@@ -92,7 +92,7 @@ h2 {
     font-family: "Orbitron", sans-serif;
     font-size: 3rem;
     font-weight: 900;
-    color: rgb(0, 0, 0.3);
+    color: #333;
     text-shadow: 0 0 8px rgba(255, 255, 255);
     text-align: center;
     margin: 50px;
@@ -152,6 +152,21 @@ header {
     color: rgb(0, 0, 0);
 }
 
+iframe {
+    max-width: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 430px) {
     nav ul {
         flex-direction: column;
@@ -194,4 +209,88 @@ header {
     max-width: 800px;
     width: 90%;
     font-weight: 700;
+}
+
+.dark {
+    background-color: rgb(5, 0, 65);
+    color: white;
+}
+
+.art img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.blur {
+    filter: blur(8px);
+    pointer-events: none; /* bloqueia clique */
+    user-select: none;
+}
+
+.bloqueio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+}
+
+button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #169ea2, #0077ff);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.7);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 247, 255, 1);
+}
+
+header {
+    background-color: #ccc;
+}
+
+.dark header {
+    background-color: rgb(11, 38, 112);
+}
+
+.dark .texto1,
+.dark .texto2,
+.dark .texto3 {
+    background-color: #222;
+    color: white;
+}
+
+footer {
+    background: #000;
+    color: yellow;
+}
+
+h2 {
+    color: #333;
+}
+
+.dark h2 {
+    color: white;
+}
+
+.dark a {
+    color: #00f7ff;
 }

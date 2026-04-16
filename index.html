@@ -14,7 +14,7 @@
     <title>Ninja Go - Jogo de Aventura Ninja</title>
 </head>
 
-<body>
+<body class="dark">
     <header>
         <nav>
             <ul>
@@ -33,6 +33,15 @@
             </ul>
         </nav>
     </header>
+    <button onclick="modoEscuro(this)">🌙</button>
+
+    <script>
+        function modoEscuro(btn) {
+            document.body.classList.toggle("dark");
+            btn.innerText = document.body.classList.contains("dark") ? "🌙" : "☀️";
+        }
+    </script>
+
     <div class="logo">Ninja Go</div>
     <div class="center">
         <img src="icon ninja.png">
@@ -43,8 +52,11 @@
         <div class="texto1">
             Ninja Go é um jogo de plataforma simples e divertido,
             nele você controla Kaito, um ninja solitário em busca de vingança
-            depois que o coração sagrado de sua familia foi roubado,
-            este game foi feito para quem não tem medo de desafios e aventuras.
+            depois que o coração sagrado de sua familia foi roubado.
+
+            <p>
+                Este jogo é destinado a jogadores que gostam de desafios, aventura e jogos de plataforma.
+            </p>
         </div>
     </section>
     <section class="historia" id="historia">
@@ -79,18 +91,71 @@
             <img src="art3.png" alt="arquiteto Pálido">
 
             <p>
-                Este é o vilão principal, o Arquitéto pálido, o objetivo é recuperar o coração 
+                Este é o vilão principal, o Arquitéto pálido, o objetivo é recuperar o coração
                 das mãos dele.
             </p>
         </section>
     </section>
-    </div>
     <section class="Jogar agora" id="jogar">
         <h2>Jogar agora</h2>
-        <iframe width="100%" height="600" src="Jogo02/index.html"></iframe>
+        <iframe id="gameFrame" width="100%" height="600" src="Jogo02/index.html"></iframe>
+    </section>
+    <section class="feedback">
+        <h2>Deixe seu feedback</h2>
+        <form id="formFeedback">
+            <input type="text" id="nomeFeedback" placeholder="Seu nome" required>
+
+            <textarea id="mensagemFeedback" placeholder="Digite seu feedback..." required></textarea>
+
+            <button type="submit">Enviar Feedback</button>
+        </form>
+
+        <p id="respostaFeedback"></p>
     </section>
     <footer>
-        Desenvolvido por Silvio
+        @2026 Desenvolvido por Silvio
     </footer>
+    <script>
+        let nome = prompt("Qual seu nome?");
+
+        // Se cancelar ou deixar vazio
+        if (!nome) {
+            alert("Nome é obrigatório!");
+            location.reload();
+        }
+
+        let idade = parseInt(prompt("Qual sua idade?"));
+
+        // Validação da idade
+        if (isNaN(idade)) {
+            alert("Digite uma idade válida!");
+            location.reload();
+        }
+
+        // MAIOR DE IDADE
+        if (idade >= 18) {
+            alert("Bem-vindo ao Ninja Go, " + nome + "!");
+        }
+
+        // MENOR DE IDADE (BLOQUEIO)
+        else {
+            alert("Acesso negado! Apenas maiores de 18 anos podem acessar.");
+
+            document.body.classList.add("blur");
+
+            let bloqueio = document.createElement("div");
+            bloqueio.classList.add("bloqueio");
+
+            bloqueio.innerHTML = `
+            <div>
+                <h1>Acesso Bloqueado</h1>
+                <p>${nome}, você precisa ter 18 anos ou mais para acessar este conteúdo.</p>
+            </div>
+        `;
+
+            document.body.appendChild(bloqueio);
+        }
+    </script>
 </body>
+
 </html>
